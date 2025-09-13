@@ -1,0 +1,31 @@
+End - Goal: Client && Server. end-end solution
+Constraints:
+1. performce (large GB files)
+2. live sync only the lastest not sync the whole file 
+3. real time (schedule job using setTimeout)
+4. multiple clients 
+5. not stay in loading state 
+6. no external tools 
+
+Note: working solution needed, code efficiency, edge casess (?)
+Techstack: Node.js
+
+Queries
+1. Log file can be considered within the same machine right ? or is it remote machine
+2. UI can be basic ?
+3. Last 10 lines or can it be configurable ?
+
+Sol:
+- Websocket
+- Entity Websockets: active client (add, remove, ...)
+- Service: (parsing the log file, init(slice last 10 line), live sync)
+- connectionManager (Websockets.add, Websockets.remove, Websockets.error)
+- fileWatch (watch if any change do liveSync)
+
+UI:
+- react.js 
+
+
+
+
+
